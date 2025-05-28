@@ -1,12 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Resumen</title>
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1>Resumen</h1>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>proyecto</title>
+</head>
+<body>
+    <div class="container">
+        <div class ="container-form"> 
+            <form class="inicio-session">
+                <h2>Inicio</h2>
+                <span>ingrese su correo y contraseña para ingresar</span>
+                <div class="container-input">
+                    <input type="text" placeholder="correo Electronico" id="email">
+                </div>
+                <div class="container-input">
+                    <input type="password" placeholder="contraseña" id="password">
+                </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button class="button">Inicio</button>
+            </form>
+        </div>
+        <div class ="container-form"> 
+            <form class="registro">
+                <h2>Registro</h2>
+                <span>Ingrese sus datos</span>
+                <div class="container-input">
+                    <input type="name" placeholder="nombre" id="nombre">
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="correo Electronico" id="email">
+                </div>
+                <div class="container-input">
+                    <input type="password" placeholder="contraseña" id="password">
+                </div>
+                <button class="button" type ="button">Registrarse</button>
+            </form>
+        </div> 
+        
+        <div class="container-bienvenido">
+            <div class="bienvenido-sign-up bienvenido">
+                <h3>!Bienvenido¡</h3>
+                <p>Ingresar sus datos personales para iniciar session</p>
+                <button class="button" id="btn-sign-up">Registrarse</button>
+            </div> 
+            <div class="bienvenido-sign-in bienvenido">
+                <h3>Hola</h3>
+                <p>Ingrese sus datos para registrarse: </p>
+                <button class="button" id="btn-sign-in">Iniciar session</button>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>

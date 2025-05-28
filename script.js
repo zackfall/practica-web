@@ -26,3 +26,5 @@ registroForm.addEventListener("submit", (e) => {
     // Aquí puedes poner la lógica para el registro
     console.log("Registro enviado");
 });
+
+//Validar contraseña 
