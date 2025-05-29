@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
 .inicio-session h2 {
@@ -12,22 +13,19 @@
 
 body {
   font-family: "Roboto Mono", monospace;
+  width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #f2f2f2;
 }
 
 .container {
-  width: 800px;
+  width: 100%;
   height: 600px;
   background: #fff;
   display: flex;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .forms-container {
@@ -100,6 +98,24 @@ body {
   cursor: pointer;
 }
 
+.container-input .error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: block;
+  min-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Opcional: resalta el input si hay error */
+.container-input input:invalid,
+.container-input input.error {
+  border: 1.5px solid #e74c3c;
+  background: #ffeaea;
+}
+
 .container-bienvenido {
   border-radius: 50% 0 50%;
   position: absolute;
@@ -145,4 +161,27 @@ body {
 
 .container.toggle .container-bienvenido {
   transform: translateX(-100%);
+}
+
+.strength-container {
+    margin-top: 5px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+#strengthText {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
