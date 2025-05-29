@@ -19,7 +19,6 @@ const nombreInput = document.getElementById("nombre");
 const emailRegistroInput = document.getElementById("emailRegistro");
 const passwordRegistroInput = document.getElementById("passwordRegistro");
 const confirmPasswordInput = document.getElementById("confirmPassword");
-const confirmPasswordError = document.getElementById("confirmPasswordError");
 
 // BARRA DE FUERZA
 const barraFuerza = document.getElementById("barraFuerza");
@@ -33,7 +32,7 @@ function validarEmail(email) {
 
 function evaluarFuerza(password) {
     let fuerza = 0;
-    if (password.length >= 10) fuerza++;
+    if (password.length >= 8) fuerza++;
     if (/[A-Z]/.test(password)) fuerza++;
     if (/[a-z]/.test(password)) fuerza++;
     if (/[0-9]/.test(password)) fuerza++;
@@ -63,6 +62,10 @@ inicioForm.addEventListener("submit", (e) => {
 
     const email = document.getElementById("emailInicio").value.trim();
     const password = document.getElementById("passwordInicio").value;
+    const passwordError = document.getElementById("passwordError");
+    const emailError = document.getElementById("emailError");
+    emailError.textContent = "";
+    passwordError.textContent = "";
 
     if (!email || !password) {
         alert("Por favor, complete todos los campos.");
@@ -81,31 +84,36 @@ inicioForm.addEventListener("submit", (e) => {
 registroForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const formError = document.getElementById("formError");
+    const passwordError = document.getElementById("passwordError");
+    const confirmPasswordError = document.getElementById("confirmPasswordError");
+    const emailError = document.getElementById("emailError");
+    formError.textContent = ""; // Limpiar mensajes de error
+    passwordError.textContent = "";
+    confirmPasswordError.textContent = "";
+    emailError.textContent = "";
     const nombre = nombreInput.value.trim();
     const email = emailRegistroInput.value.trim();
     const password = passwordRegistroInput.value;
     const confirmPassword = confirmPasswordInput.value;
-
     if (!nombre || !email || !password || !confirmPassword) {
-        alert("Por favor, complete todos los campos.");
+        formError.textContent = "Por favor, complete todos los campos.";
         return;
     }
 
     if (!validarEmail(email)) {
-        alert("Correo electrónico inválido.");
+        emailError.textContent = "Ingrese un correo electrónico válido.";
         return;
     }
 
-    if (password.length < 10) {
-        alert("La contraseña debe tener al menos 10 caracteres.");
+    if (password.length < 8) {
+        passwordError.textContent = "La contraseña debe tener al menos 10 caracteres.";
         return;
     }
 
     if (password !== confirmPassword) {
         confirmPasswordError.textContent = "Las contraseñas no coinciden.";
         return;
-    } else {
-        confirmPasswordError.textContent = "";
     }
 
     alert("Registro exitoso");

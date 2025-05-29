@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/login-styles.css" />
+  <title>proyecto</title>
+</head>
+
+<body>
+  <special-header></special-header>
+  <div class="container">
+    <!-- Formulario de Inicio -->
+    <div class="container-form">
+      <form class="inicio-session">
+        <h2>Inicio</h2>
+        <span>Ingrese su correo y contraseña para ingresar</span>
+        <div class="container-input">
+          <input type="text" placeholder="Correo Electrónico" id="emailInicio" />
+          <span class="error" id="emailError"></span>
+        </div>
+        <div class="container-input">
+          <input type="password" placeholder="Contraseña" id="passwordInicio" />
+          <span class="error" id="passwordError"></span>
+        </div>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <button class="button" type="submit">Inicio</button>
+        <span id="formError"></span>
+      </form>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div class="container-form">
+      <form class="registro">
+        <h2>Registro</h2>
+        <span>Ingrese sus datos</span>
+        <div class="container-input">
+          <input type="text" placeholder="Nombre" id="nombre" />
+          <span class="error" id="nombreError"></span>
+        </div>
+        <div class="container-input">
+          <input type="text" placeholder="Correo Electrónico" id="emailRegistro" />
+          <span class="error" id="emailError"></span>
+        </div>
+        <div class="container-input">
+          <input type="password" placeholder="Contraseña" id="passwordRegistro" />
+          <div class="strength-container">
+            <div class="strength-bar" id="barraFuerza"></div>
+            <span id="strengthText"></span>
+          </div>
+          <span id="strengthText"></span>
+        </div>
+        <div class="container-input">
+          <input type="password" placeholder="Confirma tu contraseña" id="confirmPassword" />
+          <span class="error" id="confirmPasswordError"></span>
+        </div>
+        <button class="button" type="submit">Registrarse</button>
+        <span id="formError"></span>
+      </form>
+    </div>
+
+    <!-- Panel de Bienvenida -->
+    <div class="container-bienvenido">
+      <div class="bienvenido-sign-up bienvenido">
+        <h3>¡Bienvenido!</h3>
+        <p>Ingrese sus datos personales para iniciar sesión</p>
+        <button class="button" id="btn-sign-up">Registrarse</button>
+      </div>
+      <div class="bienvenido-sign-in bienvenido">
+        <h3>Hola</h3>
+        <p>Ingrese sus datos para registrarse:</p>
+        <button class="button" id="btn-sign-in">Iniciar sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/login-script.js"></script>
+  <script src="src/headerManager.js"></script>
+</body>
+
+</html>
