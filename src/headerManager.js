@@ -11,12 +11,20 @@ class SpecialHeader extends HTMLElement {
                     min-height: 100vh;
                 }
 
+                :root {
+                    --sidebar-width: 220px;
+                }
+
                 .sidebar {
-                    width: 220px;
+                    width: var(--sidebar-width);
                     background: #3b2a41;
                     color: #fff;
                     padding-top: 32px;
                     padding-left: 0;
+                    height: 100%;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
                     min-height: 100vh;
                     box-sizing: border-box;
                 }
@@ -59,23 +67,16 @@ class SpecialHeader extends HTMLElement {
                 .sidebar a:hover {
                     text-decoration: underline;
                 }
-
-                .main-content {
-                    flex: 1;
-                    padding: 32px 48px;
-                    background: #fff;
-                    min-height: 100vh;
-                }
             </style>
-            <aside class="sidebar">
-                <nav>
-                    <ul>
-                        <li class="active"><a href="index.html">Resumen</a></li>
-                        <li><a href="actividades.html">Actividades</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </nav>
-            </aside>
+                <aside class="sidebar">
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="index.html">Resumen</a></li>
+                            <li><a href="actividades.html">Actividades</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </nav>
+                </aside>
         `;
 
         const links = this.querySelectorAll('.sidebar a');
@@ -108,6 +109,7 @@ class PageHeader extends HTMLElement {
                     background: #fff;
                     border-bottom: 2px solid #f2e6f7;
                     margin-bottom: 24px;
+                    margin-left: var(--sidebar-width);
                 }
                 .page-header-title {
                     font-size: 2rem;
