@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Actividad</title>
+    <link rel="stylesheet" href="css/editar-styles.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <special-header></special-header>
+    <div class="main-content">
+        <page-header class="header" title="Editar Actividad"></page-header>
+        <main class="container">
+            <form class="form" action="">
+                <h4 class="score">Calificación 10/10</h4>
+                <div class="form-group">
+                    <label for="activity-name">Nombre</label>
+                    <input type="text" id="activity-name" name="activity-name" value="Tarea 1" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" name="date" value="2000-01-01" required>
+                </div>
+                <div class="form-group">
+                    <label for="reminder">Recordatorio</label>
+                    <input type="date" id="reminder" name="reminder" value="2000-02-20" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Materia</label>
+                    <input type="text" id="subject" name="subject" value="Matemáticas" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" name="description" rows="4"
+                        required>Tarea de matemáticas sobre álgebra.</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="./src/headerManager.js"></script>
+</body>
+
+</html>
