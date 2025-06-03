@@ -10,8 +10,9 @@
 
 <body>
   <special-header></special-header>
+  <!-- Contenedor principal de todo el formulario -->
   <div class="container">
-    <!-- Formulario de Inicio -->
+    <!-- Formulario de Inicio de Sesión -->
     <div class="container-form">
       <form class="inicio-session">
         <h2>Inicio</h2>
@@ -22,6 +23,8 @@
         </div>
         <div class="container-input">
           <input type="password" placeholder="Contraseña" id="passwordInicio" />
+          <!--boton para mostrar la contraseña "inicio"-->
+          <!--<button type="button" onclick="togglePassword('passwordInicio', this)">mostrar</button>-->
           <span class="error" id="passwordError"></span>
         </div>
         <a href="#">¿Olvidaste tu contraseña?</a>
@@ -30,43 +33,75 @@
       </form>
     </div>
 
-    <!-- Formulario de Registro -->
+    <!-- Formulario de Registro de Usuario -->
     <div class="container-form">
+      <!-- Formulario de registro con clase 'registro' -->
       <form class="registro">
         <h2>Registro</h2>
         <span>Ingrese sus datos</span>
+
+        <!-- Campo para ingresar el nombre del usuario -->
         <div class="container-input">
           <input type="text" placeholder="Nombre" id="nombre" />
+          <!-- Span para mostrar mensajes de error relacionados al nombre -->
           <span class="error" id="nombreError"></span>
         </div>
+
+        <!-- Campo para ingresar el correo electrónico del usuario -->
         <div class="container-input">
           <input type="text" placeholder="Correo Electrónico" id="emailRegistro" />
+          <!-- Span para mostrar mensajes de error relacionados al correo -->
           <span class="error" id="emailError"></span>
         </div>
+
+        <!-- Campo para ingresar la contraseña -->
         <div class="container-input">
           <input type="password" placeholder="Contraseña" id="passwordRegistro" />
+
+          <!--boton para mostrar la contraseña "Registro"-->
+          <button type="button" onclick="togglePassword('passwordRegistro',this)">mostrar</button>
+
+          <!-- Contenedor visual que muestra la fuerza de la contraseña -->
           <div class="strength-container">
+
+            <!-- Barra que se rellena dependiendo de la fuerza de la contraseña -->
             <div class="strength-bar" id="barraFuerza"></div>
+
+            <!-- Texto que describe la fuerza: débil, media o fuerte -->
             <span id="strengthText"></span>
           </div>
-          <span id="strengthText"></span>
         </div>
+
+        <!-- Campo para confirmar la contraseña ingresada -->
         <div class="container-input">
           <input type="password" placeholder="Confirma tu contraseña" id="confirmPassword" />
+
+          <!--boton para mostrar contraseña "confirmar contraseña de registro"-->
+          <button type="button" onclick="togglePassword('confirmPassword',this)">mostrar</button>
+          <!-- Span para mostrar errores si la contraseña y la confirmación no coinciden -->
           <span class="error" id="confirmPasswordError"></span>
         </div>
+
+        <!-- Botón para enviar el formulario y registrar al usuario -->
         <button class="button" type="submit">Registrarse</button>
+
+        <!-- Span para mostrar errores generales del formulario (como campos vacíos o inválidos) -->
         <span id="formError"></span>
       </form>
     </div>
 
-    <!-- Panel de Bienvenida -->
+    <!-- Panel de Bienvenida que permite cambiar entre inicio y registro -->
     <div class="container-bienvenido">
+
+
+      <!-- Panel para mostrar mensaje de bienvenida al registrarse -->
       <div class="bienvenido-sign-up bienvenido">
         <h3>¡Bienvenido!</h3>
         <p>Ingrese sus datos personales para iniciar sesión</p>
         <button class="button" id="btn-sign-up">Registrarse</button>
       </div>
+
+      <!-- Panel para mostrar mensaje al usuario ya registrado -->
       <div class="bienvenido-sign-in bienvenido">
         <h3>Hola</h3>
         <p>Ingrese sus datos para registrarse:</p>

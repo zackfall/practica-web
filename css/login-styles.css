@@ -1,23 +1,27 @@
-
+/* Fuente personalizada desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
+/* Estilo para los títulos h2 dentro de la sección de inicio de sesión */
 .inicio-session h2 {
   color: #270e27;
 }
 
+/* Reset de márgenes y paddings, y box-sizing para evitar problemas de layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos generales del cuerpo de la página */
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace; /* Fuente de estilo tipo máquina de escribir */
   width: 100%;
   height: 100vh;
-  background: #f2f2f2;
+  background: #f2f2f2; /* Fondo gris claro */
 }
 
+/* Contenedor principal del formulario (login/register) */
 .container {
   width: 100%;
   height: 600px;
@@ -28,13 +32,15 @@ body {
   border-radius: 10px;
 }
 
+/* Contenedor que agrupa ambos formularios (login y registro) */
 .forms-container {
   width: 100%;
   height: 100%;
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out; /* Transición para el efecto toggle */
 }
 
+/* Contenedor individual de cada formulario (login o registro) */
 .container-form {
   width: 50%;
   height: 100%;
@@ -44,6 +50,7 @@ body {
   align-items: center;
 }
 
+/* Estilos del formulario dentro del contenedor */
 .container-form form {
   display: flex;
   flex-direction: column;
@@ -51,20 +58,23 @@ body {
   width: 80%;
 }
 
+/* Título del formulario */
 .container-form h2 {
   margin-bottom: 10px;
 }
 
+/* Texto debajo del título */
 .container-form span {
   margin-bottom: 20px;
   font-size: 14px;
   color: #555;
 }
 
+/* Contenedor de cada campo input */
 .container-input {
   width: 100%;
   height: 40px;
-  background: #c6cfda;
+  background: #c6cfda; /* Fondo gris azulado */
   margin-bottom: 15px;
   padding: 0 10px;
   display: flex;
@@ -72,6 +82,7 @@ body {
   border-radius: 8px;
 }
 
+/* Estilo de los inputs dentro del contenedor */
 .container-input input {
   width: 100%;
   height: 100%;
@@ -80,6 +91,7 @@ body {
   background: inherit;
 }
 
+/* Enlaces dentro del formulario, como "¿Olvidaste tu contraseña?" */
 .container-form a {
   font-size: 14px;
   color: #333;
@@ -87,10 +99,11 @@ body {
   text-decoration: none;
 }
 
+/* Botón principal del formulario */
 .button {
   width: 180px;
   height: 45px;
-  background-color: #4c2b4c;
+  background-color: #4c2b4c; /* Morado oscuro */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -98,8 +111,9 @@ body {
   cursor: pointer;
 }
 
+/* Texto de error debajo del input */
 .container-input .error {
-  color: #e74c3c;
+  color: #e74c3c; /* Rojo */
   font-size: 13px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -109,15 +123,16 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* Opcional: resalta el input si hay error */
+/* Estilo adicional para resaltar inputs con error */
 .container-input input:invalid,
 .container-input input.error {
   border: 1.5px solid #e74c3c;
-  background: #ffeaea;
+  background: #ffeaea; /* Fondo rosado */
 }
 
+/* Contenedor morado a la derecha que actúa como panel de bienvenida o cambio de formulario */
 .container-bienvenido {
-  border-radius: 50% 0 50%;
+  border-radius: 50% 0 50%; /* Forma decorativa */
   position: absolute;
   width: 50%;
   height: 100%;
@@ -132,29 +147,33 @@ body {
   transition: transform 0.6s ease-in-out;
 }
 
+/* Estilo del contenido dentro del panel de bienvenida */
 .bienvenido {
   text-align: center;
   color: #fff;
   padding: 0 30px;
 }
 
+/* Título del panel de bienvenida */
 .bienvenido h3 {
   font-size: 32px;
   margin-bottom: 10px;
 }
 
+/* Párrafo del panel de bienvenida */
 .bienvenido p {
   font-size: 14px;
   margin-bottom: 20px;
 }
 
+/* Botón transparente en el panel de bienvenida */
 .bienvenido .button {
   background: transparent;
   border: 2px solid #fff;
   color: #fff;
 }
 
-/* Toggle effect */
+/* Efecto toggle para mostrar/ocultar los formularios con transición */
 .container.toggle .forms-container {
   transform: translateX(-50%);
 }
@@ -163,6 +182,7 @@ body {
   transform: translateX(-100%);
 }
 
+/* Barra visual para indicar la fortaleza de la contraseña */
 .strength-container {
     margin-top: 5px;
     height: 8px;
@@ -172,6 +192,7 @@ body {
     overflow: hidden;
 }
 
+/* Barra de progreso que cambia de ancho según la fortaleza */
 .strength-bar {
     height: 100%;
     width: 0%;
@@ -179,6 +200,7 @@ body {
     border-radius: 4px;
 }
 
+/* Texto debajo de la barra que indica si la contraseña es débil, media o fuerte */
 #strengthText {
     display: block;
     margin-top: 5px;
