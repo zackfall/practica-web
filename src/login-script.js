@@ -78,6 +78,7 @@ inicioForm.addEventListener("submit", (e) => {
     }
 
     alert("Inicio de sesión exitoso");
+    window.location.href = "/";
 });
 
 // VALIDAR REGISTRO
@@ -117,4 +118,5 @@ registroForm.addEventListener("submit", (e) => {
     }
 
     alert("Registro exitoso");
+    window.location.href = "/";
 });

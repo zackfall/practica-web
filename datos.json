@@ -1,0 +1,93 @@
+{
+    "usuarioActivo": "Usuario 1",
+    "notificaciones": [],
+    "usuarios": [
+        {
+            "nombre": "Usuario 1",
+            "datos": {
+                "tareas": [
+                    {
+                        "nombre": "Tarea 1",
+                        "descripcion": "Esta es la primera tarea de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=tareas&actividad=0"
+                    }
+                ],
+                "examenes": [
+                    {
+                        "nombre": "Examen 1",
+                        "descripcion": "Este es el primer examen de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "7",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=examenes&actividad=0"
+                    }
+                ]
+            }
+        },
+        {
+            "nombre": "Usuario 2",
+            "datos": {
+                "tareas": [
+                    {
+                        "nombre": "Tarea 1",
+                        "descripcion": "Esta es la primera tarea de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "10",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=tareas&actividad=0"
+                    }
+                ],
+                "examenes": [
+                    {
+                        "nombre": "Examen 1",
+                        "descripcion": "Este es el primer examen de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "10",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=examenes&actividad=0"
+                    }
+                ]
+            }
+        },
+        {
+            "nombre": "Usuario 3",
+            "datos": {
+                "tareas": [
+                    {
+                        "nombre": "Tarea 1",
+                        "descripcion": "Esta es la primera tarea de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "10",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=tareas&actividad=0"
+                    }
+                ],
+                "examenes": [
+                    {
+                        "nombre": "Examen 1",
+                        "descripcion": "Este es el primer examen de matemáticas",
+                        "materia": "Matemáticas",
+                        "estado": "undone",
+                        "fecha": "2000-02-21",
+                        "recordatorio": "2000-02-20",
+                        "calificacion": "10",
+                        "url": "http://127.0.0.1:5501/editar-actividad.html?categoria=examenes&actividad=0"
+                    }
+                ]
+            }
+        }
+    ]
+}
