@@ -2,12 +2,13 @@ class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <style>
+                @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
                 :root {
                     --sidebar-width: 220px;
                 }
                 body {
                     margin: 0;
-                    font-family: 'Inter', Arial, sans-serif;
+                    font-family: 'Roboto', Arial, sans-serif;
                     background: #fff;
                     color: #2d2233;
                     min-height: 100vh;
