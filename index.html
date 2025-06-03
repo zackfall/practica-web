@@ -16,6 +16,14 @@
   </div>
 
   <script src="./src/headerManager.js"></script>
+  <script type="module">
+    import { fetch_data, check_today_tasks_and_notify } from './src/utils.js';
+    if (!localStorage.getItem('allData')) {
+      fetch_data('datos.json').then(() => check_today_tasks_and_notify());
+    } else {
+      check_today_tasks_and_notify();
+    }
+  </script>
 </body>
 
 </html>
