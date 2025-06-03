@@ -49,6 +49,11 @@ body {
     margin-right: 5px;
 }
 
+.tarea a {
+    text-decoration: none;
+    color: #3a2945;
+}
+
 .actividades {
     display: flex;
     justify-content: space-evenly;

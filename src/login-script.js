@@ -64,6 +64,8 @@ inicioForm.addEventListener("submit", (e) => {
     const password = document.getElementById("passwordInicio").value;
     const passwordError = document.getElementById("passwordError");
     const emailError = document.getElementById("emailError");
+    // Limpiar solo los errores del login
+    if (document.activeElement && document.activeElement.form !== inicioForm) return;
     emailError.textContent = "";
     passwordError.textContent = "";
 
@@ -89,7 +91,9 @@ registroForm.addEventListener("submit", (e) => {
     const passwordError = document.getElementById("passwordError");
     const confirmPasswordError = document.getElementById("confirmPasswordError");
     const emailError = document.getElementById("emailError");
-    formError.textContent = ""; // Limpiar mensajes de error
+    // Limpiar solo los errores del registro
+    if (document.activeElement && document.activeElement.form !== registroForm) return;
+    formError.textContent = "";
     passwordError.textContent = "";
     confirmPasswordError.textContent = "";
     emailError.textContent = "";
