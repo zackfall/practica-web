@@ -5,17 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resumen</title>
+  <link rel="stylesheet" href="css/resumen.css">
   <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
+
   <special-header></special-header>
 
-  <div class="main-content">
+  <div class="main">
     <page-header class="header" title="Resumen"></page-header>
+    <h3>Reporte semanal</h3>
+    <div class="reporte">
+      <div class="tareas-semanal"></div>
+    </div>
+    <div class="actividades">
+      <div class="actividad-box">
+        <h4>Actividades de hoy</h4>
+      </div>
+      <div class="actividad-box">
+        <h4>Actividades de mañana</h4>
+      </div>
+    </div>
   </div>
 
-  <script src="./src/headerManager.js"></script>
+  <script src="src/headerManager.js"></script>
+  <script type="module" src="src/resumen-render.js"></script>
   <script type="module">
     import { fetch_data, check_today_tasks_and_notify } from './src/utils.js';
     if (!localStorage.getItem('allData')) {

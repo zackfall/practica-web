@@ -2,96 +2,67 @@ body {
     font-family: sans-serif;
     margin: 0;
     display: flex;
-    }
-
-
-.sidebar {
-    background-color: #4c2b4c;
-    color: white;
-    width: 200px;
-    height: 100vh;
-    padding: 20px 10px;
-    }
-
-.sidebar h3 {
-    margin-bottom: 20px;
-    }
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    }
-
-.sidebar li {
-    padding: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    }
-
-.sidebar li:hover {
-    background-color: #3a2945;
-    }
-
+}
 
 .main {
     flex: 1;
-    padding: 20px;
-    }
+}
 
 .botonesHeader {
     display: flex;
-    justify-content:right;
+    justify-content: right;
     align-items: center;
-    }
+}
 
-.resumen {
-    color: #e84d5b;
-    }
-
-.header h1 {
-    color: #e84d5b;
-    }
+.main h3 {
+    color: #3a2945;
+    margin: 10px 20px;
+}
 
 .reporte {
     border: 1px solid #3a2945;
     border-radius: 10px;
     padding: 15px;
+    margin: 0 20px;
     margin-bottom: 30px;
-    }
+}
 
 .tareas-semanal {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    }
+}
 
 .tarea {
-    width: 150px;
-    }
+    margin: 10px;
+    width: 250px;
+}
 
 .tarea span {
     display: block;
     font-size: 14px;
+    margin-top: 6px;
     color: #555;
-    }
+}
 
-.dot {
+.tarea svg {
     color: red;
     margin-right: 5px;
-    }
+}
 
 .actividades {
     display: flex;
+    justify-content: space-evenly;
     gap: 40px;
-    }
+    margin: 20px 20px;
+}
 
 .actividad-box {
     border: 1px solid #3a2945;
     border-radius: 10px;
     padding: 15px;
     width: 200px;
-    }
+}
 
 .actividad-box p {
     margin: 8px 0;
-    }
+}
